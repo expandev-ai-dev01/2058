@@ -8,6 +8,7 @@
 
 import { Router } from 'express';
 import * as initExampleController from '@/api/internal/init-example/controller';
+import * as habitController from '@/api/internal/habit/controller';
 
 const router = Router();
 
@@ -20,5 +21,17 @@ router.post('/init-example', initExampleController.createHandler);
 router.get('/init-example/:id', initExampleController.getHandler);
 router.put('/init-example/:id', initExampleController.updateHandler);
 router.delete('/init-example/:id', initExampleController.deleteHandler);
+
+/**
+ * @rule {be-route-configuration}
+ * Habit routes - /api/internal/habit
+ */
+router.get('/habit', habitController.listHandler);
+router.post('/habit', habitController.createHandler);
+router.get('/habit/:id', habitController.getHandler);
+router.put('/habit/:id', habitController.updateHandler);
+router.delete('/habit/:id', habitController.deleteHandler);
+router.post('/habit/:id/archive', habitController.archiveHandler);
+router.post('/habit/:id/restore', habitController.restoreHandler);
 
 export default router;

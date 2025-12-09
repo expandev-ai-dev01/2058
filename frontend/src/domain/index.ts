@@ -1,2 +1,1 @@
-// Domain modules export
-export {};
+export * as habit from './habit/_module';

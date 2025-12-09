@@ -18,3 +18,16 @@ export {
   type InitExampleLimitsType,
   type InitExamplePriority,
 } from './initExample';
+
+/**
+ * Habit constants
+ */
+export {
+  HABIT_DEFAULTS,
+  HABIT_CATEGORIES,
+  HABIT_LIMITS,
+  type HabitDefaultsType,
+  type HabitCategoriesType,
+  type HabitLimitsType,
+  type HabitCategory,
+} from './habit';

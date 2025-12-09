@@ -10,3 +10,8 @@
  * InitExample instances
  */
 export { initExampleStore, type InitExampleRecord } from './initExample';
+
+/**
+ * Habit instances
+ */
+export { habitStore, type HabitRecord } from './habit';
